@@ -7,19 +7,19 @@ See [version-repo](https://www.npmjs.com/package/version-repo) for the general v
 # Repositories Classes
 <!-- =============================================== -->
 
-### MongoRepo *(API: Asynchronous, Stored Types: Any)*
+## MongoRepo *(API: Asynchronous, Stored Types: Any)*
 
 A synchronous repository which keeps resources in memory.
 
 ##### Constructor parameters
 
 - collection:  A MongoDB Collection object.
-- config?:  {
-		update: "latest" (default) | "any" | "none";
-		delete: "latest" (default) | "any" | "none";
-	}
 
-Example: 
+- config:  An object with the following attributes: 
+	- update: (optional) one of "latest" (default), "any", "none"
+	- delete: (optional) one of "latest" (default), "any", "none"
+
+##### Example: 
 
 ```javascript
 var MongoClient = require("mongodb").MongoClient;
