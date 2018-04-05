@@ -1,0 +1,3 @@
+# exclude external modules from the git repo
+node_modules/*
+**/*map
