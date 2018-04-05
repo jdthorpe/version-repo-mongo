@@ -34,7 +34,7 @@ MongoClient.connect(
 		var DBO = client.db("mydb");
 
 		DBO.createCollection(
-			"customers", 
+			"my-repo", 
 			function(err, collection) {
 
 				if (err) 

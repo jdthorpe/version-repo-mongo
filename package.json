@@ -1,18 +1,18 @@
 {
   "name": "version-repo-mongo",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A mongodb based version-repo data store",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/app.js",
-    "build": "((tsc  && mocha) || true)",
+    "build": "((tsc && mocha) || true)",
     "debug": "echo \"Error: no debug script specified\" && exit 1"
   },
   "keywords": [
     "version",
     "semver",
-    "remote",
+    "consistent",
     "repository",
+    "bower",
     "mongo",
     "mongodb",
     "store"
@@ -38,6 +38,6 @@
     "bluebird": "^3.4.7",
     "mongoclient": "^1.0.3",
     "semver": "^5.3.0",
-    "version-repo": "file:../version-repo"
+    "version-repo": "^2.0.0"
   }
 }
