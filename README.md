@@ -3,9 +3,7 @@ package with a backend provided by MongoDB.
 
 See [version-repo](https://www.npmjs.com/package/version-repo) for the general version-repo API.
 
-<!-- =============================================== -->
 # Repositories Classes
-<!-- =============================================== -->
 
 ## MongoRepo *(API: Asynchronous, Stored Types: Any)*
 
