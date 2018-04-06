@@ -24,20 +24,14 @@ interface resource_doc<T> extends resource_data<T> {
 
 export class MongoRepo<T> implements deferred_repository<T> {
 
-
     constructor(public coll:Collection<resource>,private config:ConfigOptions = {}){
-        // this is required for consistency during updates
-        coll.createIndex({name:1,timestamp:1})
+        coll.createIndex({name:1,version:1})
     }
-
 
     // ------------------------------
     // CRUD
     // ------------------------------
     create(options:resource_data<T>):Promise<boolean>{
-
-        //console.log('**************************** received :  '+pkg)
-        //console.log('**************************** at :  ',options)
 
 
         var loc:package_loc;
@@ -364,15 +358,4 @@ export class MongoRepo<T> implements deferred_repository<T> {
     }
 
 }
-
-// for testing
-//--             this.coll.insertMany([
-//--                 {name:'a',version:"1.0.0"},
-//--                 {name:'a',version:"1.1.0"},
-//--                 {name:'a',version:"1.1.3"},
-//--                 {name:'B',version:"1.0.0"},
-//--                 {name:'B',version:"1.1.0"},
-//--                 {name:'B',version:"1.1.3"},
-//--             ])
-
 
